@@ -86,7 +86,7 @@ export const DealerArea: React.FC<DealerAreaProps> = ({ className = '' }) => {
       {gameStatus === GameStatus.DEALER_TURN && (
         <div className="text-center mt-4">
           <p className="text-yellow-400 font-semibold animate-pulse">
-            Dealer's Turn
+            Dealer&apos;s Turn
           </p>
         </div>
       )}

@@ -9,26 +9,17 @@ import { ButtonArea } from './ui/ButtonArea'
 import { BettingArea } from './ui/BettingArea'
 import Deck from './assets/Deck'
 import { useBlackjackGame } from '../hooks/useBlackjackGame'
-import { GameStatus } from './context/BlackjackContext'
 
 // Inner component that uses the game hook (needs to be inside provider)
 function BlackjackGameInner() {
   const {
-    gameStatus,
     deck,
     startNewGame,
     handleHit,
     handleStand,
     handleDouble,
-    getGameResult,
-    needsReshuffle,
     canDoubleDown,
-    playerValue,
-    dealerValue,
   } = useBlackjackGame();
-
-  // Get game result for display
-  const gameResult = getGameResult();
 
   return (
     <div className='flex items-center justify-center h-screen bg-gray-900 px-8 py-4'>
